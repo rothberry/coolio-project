@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User = Api::V1::User
+# User.delete_all
+
+puts "KILLING USERS"
+
+u1 = User.create(username: "shawny", password: "123")
+u2 = User.create(username: "barbalie", password: "123")
+
+puts "SEEDED USERS"
