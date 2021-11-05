@@ -40,3 +40,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "active_model_serializers", "~> 0.10.12"
+
+gem "httparty", "~> 0.20.0"
+gem "dotenv", "~> 2.7"
