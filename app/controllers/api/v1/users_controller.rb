@@ -16,10 +16,10 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-  # def show
-  #   user = User.find_by(id: params[:id])
-  #   render json: user, include: [:id, :username]
-  # end
+  def show
+    user = Api::V1::User.find_by(id: params[:id])
+    render json: user, include: [:id, :username]
+  end
 
   private
 
