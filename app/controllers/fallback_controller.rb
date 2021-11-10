@@ -3,6 +3,6 @@ class FallbackController < ApplicationController
     # For fullstack
     # render file: 'public/index.html'
     # for backend only:
-    render json: "Hi"
+    render json: {message: "Hi"}
   end
 end
