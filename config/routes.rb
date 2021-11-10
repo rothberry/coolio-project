@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      resources :dogs
+    end
+  end
+  namespace :api do
+    namespace :v1 do
       resources :users, only: [:index]
       post '/signup', to: "users#signup"
       get '/me', to: "sessions#me"
@@ -12,5 +17,5 @@ Rails.application.routes.draw do
   
   get "/hello", to: "application#hello_world"
 
-  # Might need that fallback route...
+  get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

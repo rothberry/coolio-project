@@ -7,11 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User = Api::V1::User
-# User.delete_all
+Dog = Api::V1::Dog
+User.delete_all
+Dog.delete_all
 
-puts "KILLING USERS"
+puts "Deleting db"
 
 u1 = User.create(username: "shawny", password: "123")
 u2 = User.create(username: "barbalie", password: "123")
+u3 = User.create(username: "philo", password: "123")
 
 puts "SEEDED USERS"
+
+u3.dogs.create(name: "chauncy", breed: "mutt", age: 10)
+u1.dogs.create(name: "kevin", breed: "bulldog", age: 2)
+u2.dogs.create(name: "mr peanutbutter", breed: "golden retreiver", age: 1)
+
+puts "SEEDED DOGS"
