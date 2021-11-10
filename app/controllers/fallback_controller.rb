@@ -1,5 +1,8 @@
 class FallbackController < ApplicationController
   def index
-    render file: 'public/index.html'
+    # For fullstack
+    # render file: 'public/index.html'
+    # for backend only:
+    render json: "Hi"
   end
 end
